@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="userClientService"
+	class="com.bee.sample.service.impl.UserClientServiceImpl">
+	<property name="strArray"> 
+		<array>
+			<value>aaa</value>
+			<value>bbb</value>
+			<value>ccc</value>
+		</array>
+	</property>
+	<property name="dataLst">
+		<set>
+			<value>aaa</value>
+			<value>bbb</value>
+			<value>ccc</value>
+		</set>
+	</property>
+	<property name="dataSet">
+		<set>
+			<value>aaa</value>
+			<value>bbb</value>
+			<value>ccc</value>
+		</set>
+	</property>
+	<property name="dataMap">
+		<map>
+			<entry key="k1" value="v1"></entry>
+			<entry key="k2" value="v2"></entry>
+		</map>
+	</property>
+	<property name="dataProp">
+		<props>
+			<prop key="k1">v1</prop>
+			<prop key="k2">v2</prop>
+		</props>
+	</property>
+	<property name="userClientDao" ref="userClientDao">
+		
+	</property>
+</bean>
+<bean id="userClientDao"
+	class="com.bee.sample.dao.impl.UserClientDaoImpl">
+	
+</bean>
+<bean id="userClientServiceU1"
+	class="com.bee.sample.service.impl.UserClientServiceImpl">
+	<constructor-arg name="arg0" value="value0"></constructor-arg>
+</bean>
+</beans>
